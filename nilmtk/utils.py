@@ -77,7 +77,7 @@ def tree_root(graph):
     """
     # from http://stackoverflow.com/a/4123177/732596
     assert isinstance(graph, nx.Graph)
-    roots = [node for node, in_degree in graph.in_degree_iter()
+    roots = [node for node, in_degree in graph.in_degree()
              if in_degree == 0]
     n_roots = len(roots)
     if n_roots > 1:
@@ -387,6 +387,7 @@ def safe_resample(data, **resample_kwargs):
         return data
 
     try:
+        #print(resample_kwargs)
         data = data.resample(**resample_kwargs)
     except pytz.AmbiguousTimeError:
         # Work-around for

@@ -580,6 +580,8 @@ class MeterGroup(Electric):
                             if upstream_meter == node:
                                 upstream_meter = node
                                 break
+                        if isinstance(upstream_meter, MeterGroup):
+                            raise RuntimeError("We don't support a MeterGroup as the upstream meter of a meter.\nMeter: %s\nupstream meter: %s" % (str(meter), str(upstream_meter)))
                         wiring_graph.add_edge(upstream_meter, meter)
         _build_wiring_graph(self.meters)
         return wiring_graph
