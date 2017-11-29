@@ -1,3 +1,20 @@
+# Foreword
+[This](https://github.com/adrinjalali/nilmtk) is a fork from the [official repository](https://github.com/nilmtk/nilmtk). In terms of installation, there two points worth mentioning:
+- I prefer virtualenv to conda, therefore the conda related part of the docs in this repo might not work properly.
+- I use python 3.5+, with all the packages (as far as I know) at their latest release.
+
+With that in mind, here's how I suggest you install this package:
+
+```
+virtualenv -p python3 .venv
+source .venv/bin/activate
+pip install numpy
+pip install git+https://github.com/nilmtk/nilm_metadata.git#egg=nilm_metadata
+pip install git+https://github.com/adrinjalali/nilmtk.git#egg=nilmtk
+```
+
+This is a very minimal installation, if you need other modules such as `ipython`, install them separately.
+
 # NILMTK: Non-Intrusive Load Monitoring Toolkit
 
 Non-Intrusive Load Monitoring (NILM) is the process of estimating the
