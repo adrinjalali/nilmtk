@@ -71,8 +71,8 @@ def _convert(input_path, store, tz, sort_index=True):
         nilmtk_house_id += 1
         print("Loading house", house_id, end="... ")
         stdout.flush()
-        csv_filename = input_path + 'House' + str(house_id) + '.csv'
-        columns = ['Timestamp','Aggregate','Appliance1','Appliance2','Appliance3','Appliance4','Appliance5','Appliance6','Appliance7','Appliance8','Appliance9']
+        csv_filename = join(input_path, 'House_%d.csv' % house_id)
+        columns = ['Time', 'Timestamp','Aggregate','Appliance1','Appliance2','Appliance3','Appliance4','Appliance5','Appliance6','Appliance7','Appliance8','Appliance9']
         df = _load_csv(csv_filename, columns, tz)
         if sort_index:
             df = df.sort_index() # might not be sorted...
@@ -105,11 +105,11 @@ def _load_csv(filename, columns, tz):
     dataframe
     """
     # Load data
-    df = pd.read_csv(filename, names=columns)
+    df = pd.read_csv(filename, names=columns, header=1)
     
     # Convert the integer index column to timezone-aware datetime 
     df['Timestamp'] = pd.to_datetime(df.Timestamp, unit='s', utc=True)
     df.set_index('Timestamp', inplace=True)
-    df = df.tz_localize('GMT').tz_convert(tz)
+    df = df.tz_convert(tz)
 
     return df
