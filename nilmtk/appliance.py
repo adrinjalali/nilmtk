@@ -3,8 +3,8 @@ from warnings import warn
 from collections import namedtuple
 from copy import deepcopy
 from six import iteritems
-from .hashable import Hashable
-from .utils import flatten_2d_list
+from nilmtk.hashable import Hashable
+from nilmtk.utils import flatten_2d_list
 from nilm_metadata import get_appliance_types
 
 ApplianceID = namedtuple('ApplianceID', ['type', 'instance'])

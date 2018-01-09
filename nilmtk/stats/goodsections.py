@@ -1,12 +1,14 @@
 from __future__ import print_function, division
+
+import gc
+
 import numpy as np
 from numpy import diff, concatenate
-import gc
-from .goodsectionsresults import GoodSectionsResults
-from ..timeframe import TimeFrame
-from ..utils import timedelta64_to_secs
-from ..node import Node
-from ..timeframe import list_of_timeframes_from_list_of_dicts, timeframe_from_dict
+
+from nilmtk.node import Node
+from nilmtk.stats.goodsectionsresults import GoodSectionsResults
+from nilmtk.timeframe import TimeFrame
+from nilmtk.utils import timedelta64_to_secs
 
 
 class GoodSections(Node):

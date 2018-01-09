@@ -1,1 +1,1 @@
-from .cluster import cluster
+from nilmtk.cluster import cluster

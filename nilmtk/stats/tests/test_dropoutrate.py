@@ -1,17 +1,13 @@
 #!/usr/bin/python
 from __future__ import print_function, division
+
 import unittest
 from os.path import join
-import numpy as np
-import pandas as pd
-from datetime import timedelta
-from .. import DropoutRate
-from ..goodsectionsresults import GoodSectionsResults
-from ..totalenergy import _energy_for_power_series
-from ... import TimeFrame, ElecMeter, HDFDataStore, MeterGroup
-from ...elecmeter import ElecMeterID
-from ...consts import JOULES_PER_KWH
-from ...tests.testingtools import data_dir
+
+from nilmtk.stats import DropoutRate
+from nilmtk import ElecMeter, HDFDataStore, MeterGroup
+from nilmtk.elecmeter import ElecMeterID
+from nilmtk.tests.testingtools import data_dir
 
 METER_ID = ElecMeterID(instance=1, building=1, dataset='REDD')
 METER_ID2 = ElecMeterID(instance=2, building=1, dataset='REDD')

@@ -1,11 +1,14 @@
 from __future__ import print_function, division
-import pandas as pd
+
 from datetime import timedelta
-import matplotlib.pyplot as plt
-from ..results import Results
-from nilmtk.timeframe import TimeFrame, convert_none_to_nat, convert_nat_to_none
-from nilmtk.utils import get_tz, tz_localize_naive
+
+import pandas as pd
+
+from nilmtk.timeframe import TimeFrame, convert_none_to_nat
 from nilmtk.timeframegroup import TimeFrameGroup
+from nilmtk.utils import get_tz, tz_localize_naive
+from nilmtk.results import Results
+
 
 class GoodSectionsResults(Results):
     """

@@ -6,10 +6,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.dates import DateFormatter
 from six import iteritems
-from .building import Building
-from .datastore.datastore import join_key
-from .utils import get_datastore
-from .timeframe import TimeFrame
+from nilmtk.building import Building
+from nilmtk.datastore.datastore import join_key
+from nilmtk.utils import get_datastore
+from nilmtk.timeframe import TimeFrame
 
 
 class DataSet(object):

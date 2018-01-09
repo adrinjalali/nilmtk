@@ -1,12 +1,14 @@
 from __future__ import print_function, division
-import numpy as np
+
 import gc
-from .totalenergyresults import TotalEnergyResults
-from ..node import Node
-from ..utils import timedelta64_to_secs
-from ..consts import JOULES_PER_KWH
-from ..measurement import AC_TYPES
-from ..timeframe import TimeFrame
+
+import numpy as np
+
+from nilmtk.consts import JOULES_PER_KWH
+from nilmtk.measurement import AC_TYPES
+from nilmtk.node import Node
+from nilmtk.stats.totalenergyresults import TotalEnergyResults
+from nilmtk.utils import timedelta64_to_secs
 
 
 class TotalEnergy(Node):

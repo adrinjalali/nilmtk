@@ -4,7 +4,7 @@ import unittest
 from os.path import join
 import pandas as pd
 from datetime import timedelta
-from .testingtools import data_dir
+from nilmtk.tests.testingtools import data_dir
 from nilmtk.datastore import HDFDataStore, CSVDataStore
 from nilmtk import TimeFrame
 

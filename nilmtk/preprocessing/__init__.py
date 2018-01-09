@@ -1,2 +1,2 @@
-from .clip import Clip
-from .apply import Apply
+from nilmtk.preprocessing.clip import Clip
+from nilmtk.preprocessing.apply import Apply

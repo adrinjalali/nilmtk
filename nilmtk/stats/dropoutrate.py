@@ -1,9 +1,11 @@
 from __future__ import print_function, division
+
 import numpy as np
-from ..node import Node
-from ..exceptions import TooFewSamplesError
-from ..utils import get_index 
-from .dropoutrateresults import DropoutRateResults
+from nilmtk.stats.dropoutrateresults import DropoutRateResults
+
+from nilmtk.node import Node
+from nilmtk.utils import get_index
+
 
 class DropoutRate(Node):
 

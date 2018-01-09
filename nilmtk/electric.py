@@ -16,13 +16,12 @@ from datetime import timedelta
 import gc
 import pytz
 
-from .timeframe import TimeFrame
-from .measurement import select_best_ac_type
-from .utils import (offset_alias_to_seconds, convert_to_timestamp,
+from nilmtk.timeframe import TimeFrame
+from nilmtk.measurement import select_best_ac_type
+from nilmtk.utils import (offset_alias_to_seconds, convert_to_timestamp,
                     flatten_2d_list, append_or_extend_list,
                     timedelta64_to_secs, safe_resample)
-from .plots import plot_series
-from .preprocessing import Apply
+from nilmtk.preprocessing import Apply
 from nilmtk.stats.histogram import histogram_from_generator
 from nilmtk.appliance import DEFAULT_ON_POWER_THRESHOLD
 

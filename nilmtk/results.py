@@ -2,7 +2,7 @@ import abc
 import pandas as pd
 import copy
 from six import iteritems
-from .timeframe import TimeFrame
+from nilmtk.timeframe import TimeFrame
 from nilmtk.utils import get_tz, tz_localize_naive
 
 class Results(object):

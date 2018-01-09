@@ -1,8 +1,8 @@
 from datetime import datetime
 import pandas as pd
 import numpy as np
-from ..timeframe import merge_timeframes, TimeFrame
-from .disaggregator import Disaggregator
+from nilmtk.timeframe import merge_timeframes, TimeFrame
+from nilmtk.disaggregate.disaggregator import Disaggregator
 from matplotlib import pyplot as plt
 from datetime import timedelta
 from scipy.stats import poisson, norm

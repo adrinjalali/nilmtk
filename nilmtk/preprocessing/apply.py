@@ -1,5 +1,7 @@
 from __future__ import print_function, division
-from ..node import Node
+
+from nilmtk.node import Node
+
 
 class Apply(Node):
     

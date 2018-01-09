@@ -39,9 +39,9 @@ import numpy as np
 import pandas as pd
 import math
 from warnings import warn
-from .metergroup import MeterGroup
-from .metergroup import iterate_through_submeters_of_two_metergroups
-from .electric import align_two_meters
+from nilmtk.metergroup import MeterGroup
+from nilmtk.metergroup import iterate_through_submeters_of_two_metergroups
+from nilmtk.electric import align_two_meters
 
 
 def error_in_assigned_energy(predictions, ground_truth):

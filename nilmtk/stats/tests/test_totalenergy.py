@@ -1,17 +1,20 @@
 #!/usr/bin/python
 from __future__ import print_function, division
+
 import unittest
-from ..totalenergy import TotalEnergy, _energy_for_power_series
-from ...preprocessing import Clip
-from ... import TimeFrame, ElecMeter, HDFDataStore
-from ...elecmeter import ElecMeterID
-from ...consts import JOULES_PER_KWH
-from ...tests.testingtools import data_dir
+from copy import deepcopy
+from datetime import timedelta
 from os.path import join
+
 import numpy as np
 import pandas as pd
-from datetime import timedelta
-from copy import deepcopy
+
+from nilmtk import ElecMeter, HDFDataStore
+from nilmtk.consts import JOULES_PER_KWH
+from nilmtk.elecmeter import ElecMeterID
+from nilmtk.preprocessing import Clip
+from nilmtk.stats.totalenergy import TotalEnergy, _energy_for_power_series
+from nilmtk.tests.testingtools import data_dir
 
 METER_ID = ElecMeterID(instance=1, building=1, dataset='REDD')
 

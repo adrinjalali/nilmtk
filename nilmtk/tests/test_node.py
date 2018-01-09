@@ -1,7 +1,7 @@
 #!/usr/bin/python
 from __future__ import print_function, division
 import unittest
-from ..node import find_unsatisfied_requirements
+from nilmtk.node import find_unsatisfied_requirements
 
 class TestNode(unittest.TestCase):
 

@@ -5,7 +5,7 @@ import numpy as np
 from os.path import isfile
 from nilmtk.timeframe import TimeFrame
 from nilmtk.timeframegroup import TimeFrameGroup
-from .datastore import DataStore, MAX_MEM_ALLOWANCE_IN_BYTES
+from nilmtk.datastore.datastore import DataStore, MAX_MEM_ALLOWANCE_IN_BYTES
 from nilmtk.docinherit import doc_inherit
 from builtins import range
 

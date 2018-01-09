@@ -1,9 +1,9 @@
 from __future__ import print_function, division
 from collections import namedtuple, OrderedDict
 import pandas as pd
-from .metergroup import MeterGroup
-from .datastore.datastore import join_key
-from .hashable import Hashable
+from nilmtk.metergroup import MeterGroup
+from nilmtk.datastore.datastore import join_key
+from nilmtk.hashable import Hashable
 
 BuildingID = namedtuple('BuildingID', ['instance', 'dataset'])
 

@@ -1,5 +1,6 @@
 # re-enable deprecation warnings
 import warnings
+
 warnings.simplefilter('default')
 
 from nilmtk import *

@@ -1,21 +1,24 @@
 from __future__ import print_function, division
-from warnings import warn
+
 from collections import namedtuple
 from copy import deepcopy
+from warnings import warn
+
 import numpy as np
 import pandas as pd
 from six import iteritems
-from .preprocessing import Clip
-from .stats import TotalEnergy, GoodSections, DropoutRate
-from .hashable import Hashable
-from .measurement import (select_best_ac_type, PHYSICAL_QUANTITIES,
-                          check_ac_type, check_physical_quantity)
-from .node import Node
-from .electric import Electric
-from nilmtk.exceptions import MeasurementError
-from .utils import flatten_2d_list, capitalise_first_letter
-from nilmtk.timeframegroup import TimeFrameGroup
+
 import nilmtk
+from nilmtk.electric import Electric
+from nilmtk.exceptions import MeasurementError
+from nilmtk.hashable import Hashable
+from nilmtk.measurement import (select_best_ac_type, PHYSICAL_QUANTITIES,
+                                check_ac_type, check_physical_quantity)
+from nilmtk.node import Node
+from nilmtk.preprocessing import Clip
+from nilmtk.stats import TotalEnergy, GoodSections, DropoutRate
+from nilmtk.timeframegroup import TimeFrameGroup
+from nilmtk.utils import flatten_2d_list, capitalise_first_letter
 
 ElecMeterID = namedtuple('ElecMeterID', ['instance', 'building', 'dataset'])
 
